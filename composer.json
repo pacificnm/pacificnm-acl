@@ -1,0 +1,11 @@
+{
+  "name" : "pacificnm/pacificnm-acl",
+  "description" : "Pacific NM camper project",
+  "version" : "1.0.0",
+  "require" : {
+    "php" : ">=5.6",
+    "zendframework/zendframework" : "~2.5"
+  },
+  "license" : "BSD-3-Clause",
+  "keywords" : [ "PacificNM", "Pacific Network Management" ],
+  "homepage" : "http://www.pacificnm.com"
