@@ -7,6 +7,7 @@ use Zend\Paginator\Paginator;
 interface ServiceInterface
 {
 
+    
     /**
      *
      * @param array $filter            

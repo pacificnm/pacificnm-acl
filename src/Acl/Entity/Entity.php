@@ -1,6 +1,9 @@
 <?php
 namespace Acl\Entity;
 
+use AclResource\Entity\Entity as ResourceEntity;
+use AclRole\Entity\Entity as RoleEntity;
+
 class Entity
 {
 
@@ -12,15 +15,27 @@ class Entity
 
     /**
      *
-     * @var string
+     * @var number
      */
-    protected $role;
+    protected $aclRoleId;
 
     /**
      *
-     * @var string
+     * @var number
      */
-    protected $resource;
+    protected $aclResourceId;
+
+    /**
+     *
+     * @var ResourceEntity
+     */
+    protected $resourceEntity;
+
+    /**
+     *
+     * @var RoleEntity
+     */
+    protected $roleEntity;
 
     /**
      *
@@ -33,20 +48,38 @@ class Entity
 
     /**
      *
-     * @return the $role
+     * @return the $aclRoleId
      */
-    public function getRole()
+    public function getAclRoleId()
     {
-        return $this->role;
+        return $this->aclRoleId;
     }
 
     /**
      *
-     * @return the $resource
+     * @return the $aclResourceId
      */
-    public function getResource()
+    public function getAclResourceId()
     {
-        return $this->resource;
+        return $this->aclResourceId;
+    }
+
+    /**
+     *
+     * @return the $resourceEntity
+     */
+    public function getResourceEntity()
+    {
+        return $this->resourceEntity;
+    }
+
+    /**
+     *
+     * @return the $roleEntity
+     */
+    public function getRoleEntity()
+    {
+        return $this->roleEntity;
     }
 
     /**
@@ -60,19 +93,37 @@ class Entity
 
     /**
      *
-     * @param string $role            
+     * @param number $aclRoleId            
      */
-    public function setRole($role)
+    public function setAclRoleId($aclRoleId)
     {
-        $this->role = $role;
+        $this->aclRoleId = $aclRoleId;
     }
 
     /**
      *
-     * @param string $resource            
+     * @param number $aclResourceId            
      */
-    public function setResource($resource)
+    public function setAclResourceId($aclResourceId)
     {
-        $this->resource = $resource;
+        $this->aclResourceId = $aclResourceId;
+    }
+
+    /**
+     *
+     * @param \AclResource\Entity\Entity $resourceEntity            
+     */
+    public function setResourceEntity($resourceEntity)
+    {
+        $this->resourceEntity = $resourceEntity;
+    }
+
+    /**
+     *
+     * @param \AclRole\Entity\Entity $roleEntity            
+     */
+    public function setRoleEntity($roleEntity)
+    {
+        $this->roleEntity = $roleEntity;
     }
 }

@@ -1,0 +1,52 @@
+<form method="get" class="form-horizontal">
+	<div class="modal fade" tabindex="-1" role="dialog" id="acl-search">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">
+						<i class="fa fa-lock" aria-hidden="true"></i>
+					<?php echo $this->translate('Acl Search'); ?></h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label for="aclRoleId" class="col-sm-2 control-label"><?php echo $this->translate('Role'); ?>:</label>
+						<div class="col-sm-10">
+							<select class="form-control" name="aclRoleId" id="aclRoleId">
+								<option value=""><?php echo $this->translate('Select'); ?></option>
+        						<?php foreach($this->roleEntitys as $roleEntity): ?>
+        						<option value="<?php echo $roleEntity->getAclRoleId();?>"
+									<?php if(array_key_exists('aclRoleId', $this->queryParams) &&  $this->queryParams['aclRoleId'] == $roleEntity->getAclRoleId()):?>
+									selected <?php endif;?>><?php echo $roleEntity->getAclRoleName(); ?></option>
+        						<?php endforeach; ?>
+        					</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="aclResourceId" class="col-sm-2 control-label"><?php echo $this->translate('Resource'); ?>:</label>
+						<div class="col-sm-10">
+							<select class="form-control" name="aclResourceId"
+								id="aclResourceId">
+								<option value=""><?php echo $this->translate('Select'); ?></option>
+        						<?php foreach($this->resourceEntitys as $resourceEntity): ?>
+        						<option value="<?php echo $resourceEntity->getAclResourceId();?>"
+									<?php if(array_key_exists('aclResourceId', $this->queryParams) && $this->queryParams['aclResourceId'] == $resourceEntity->getAclResourceId()):?>
+									selected <?php endif;?>>
+        							<?php echo $resourceEntity->getAclResourceName(); ?></option>
+        						<?php endforeach; ?>
+        					</select>
+						</div>
+					</div>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal"><?php echo $this->translate('Close'); ?></button>
+					<button type="submit" class="btn btn-primary"><?php echo $this->translate('Search'); ?></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</form>
