@@ -3,7 +3,7 @@ return array(
     'module' => array(
         'Acl' => array(
             'name' => 'Acl',
-            'version' => '1.0.0',
+            'version' => '1.0.1',
             'install' => array(
                 'require' => array(
                     'AclResource',
