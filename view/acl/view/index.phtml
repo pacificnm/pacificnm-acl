@@ -1,0 +1,67 @@
+<?php
+/**
+ * Pacific NM (https://www.pacificnm.com)
+ *
+ * @link      https://github.com/pacificnm/pnm for the canonical source repository
+ * @copyright Copyright (c) 20011-2016 Pacific NM USA Inc. (https://www.pacificnm.com)
+ * @license
+ */
+?>
+<div class="row">
+	<div class="col-xs-12">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+				<h3 class="box-title">
+					<i class="<?php echo $this->layout()->pageIcon; ?>" aria-hidden="true"></i>
+					<?php echo $this->translate("Application ACL"); ?> 
+					<small>
+						<?php echo ucwords($this->entity->getRoleEntity()->getAclRoleName());?> 
+						<?php echo $this->translate('Allow'); ?>
+						<?php echo $this->entity->getResourceEntity()->getAclResourceName();?>
+					</small>
+				</h3>
+				<div class="box-tools">
+					<?php echo $this->deleteButton("acl-delete", array("id" => $this->entity->getAclId())); ?>
+					
+					<?php echo $this->updateButton("acl-update", array("id" => $this->entity->getAclId())); ?>
+				</div>
+			</div>
+			<div class="box-body box-profile">
+				<h3 class="profile-username text-center">
+					<?php echo ucwords($this->entity->getRoleEntity()->getAclRoleName());?> 
+					<?php echo $this->translate('Allow'); ?>
+					<?php echo $this->entity->getResourceEntity()->getAclResourceName();?>
+				</h3>
+				<p class="text-muted text-center">
+					<?php echo $this->translate('ACL ID'); ?> <?php echo $this->entity->getAclId(); ?>
+				</p>
+				<ul class="list-group list-group-unbordered">
+    				<li class="list-group-item">
+    					<b><?php echo $this->translate('Acl Id')?>:</b>
+    					<?php echo $this->entity->getAclId(); ?>
+    				</li>
+    				<li class="list-group-item">
+    					<b><?php echo $this->translate('Acl Role Id'); ?>:</b>
+    					<?php echo $this->entity->getAclRoleId(); ?>
+    				</li>
+    				<li class="list-group-item">
+    					<b><?php echo $this->translate('Acl Resource Id'); ?>:</b>
+    					<?php echo $this->entity->getAclResourceId(); ?>
+    				</li>
+    				<li class="list-group-item">
+    					<b><?php echo $this->translate('Acl Rule'); ?>:</b>
+    					<?php echo $this->translate('Allow'); ?>
+    				</li>
+    				<li class="list-group-item">
+    					<b><?php echo $this->translate('Acl Role Name'); ?>:</b>
+    					<?php echo ucfirst($this->entity->getRoleEntity()->getAclRoleName()); ?>
+    				</li>
+    				<li class="list-group-item">
+    					<b><?php echo $this->translate('Acl Resource Name'); ?>:</b>
+    					<?php echo $this->entity->getResourceEntity()->getAclResourceName(); ?>
+    				</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

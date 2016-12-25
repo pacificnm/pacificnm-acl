@@ -1,8 +1,9 @@
 <?php
 namespace Acl\Mapper;
 
-use Acl\Entity\Entity;
+
 use Zend\Paginator\Paginator;
+use Acl\Entity\Entity;
 
 interface MysqlMapperInterface
 {

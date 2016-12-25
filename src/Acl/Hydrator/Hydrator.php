@@ -1,7 +1,7 @@
 <?php
 namespace Acl\Hydrator;
 
-use Zend\Stdlib\Hydrator\ClassMethods;
+use Zend\Hydrator\ClassMethods;
 use Acl\Entity\Entity;
 
 class Hydrator extends ClassMethods
@@ -18,7 +18,7 @@ class Hydrator extends ClassMethods
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Zend\Stdlib\Hydrator\ClassMethods::hydrate()
      */
@@ -30,12 +30,20 @@ class Hydrator extends ClassMethods
         
         parent::hydrate($data, $object);
         
+        $resourceEntity = parent::hydrate($data, new \AclResource\Entity\Entity());
+        
+        $object->setResourceEntity($resourceEntity);
+        
+        $roleEntity = parent::hydrate($data, new \AclRole\Entity\Entity());
+        
+        $object->setRoleEntity($roleEntity);
+        
         return $object;
     }
 
     /**
      *
-     * {@inheritDoc}
+     * {@inheritdoc}
      *
      * @see \Zend\Stdlib\Hydrator\ClassMethods::extract()
      */
@@ -46,6 +54,10 @@ class Hydrator extends ClassMethods
         }
         
         $data = parent::extract($object);
+        
+        unset($data['resource_entity']);
+        
+        unset($data['role_entity']);
         
         return $data;
     }

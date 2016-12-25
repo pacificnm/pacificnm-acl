@@ -40,7 +40,7 @@ class Service implements ServiceInterface
      */
     public function getAll($filter)
     {
-        return $this->getAll($filter);
+        return $this->mapper->getAll($filter);
     }
 
     /**
