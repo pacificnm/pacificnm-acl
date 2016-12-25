@@ -45,7 +45,7 @@ class ViewController extends AbstractApplicationController
         
         $this->getEventManager()->trigger('aclView', $this, array(
             'authId' => $this->identity()->getAuthId(),
-            'historyUrl' => $this->getRequest()->getUri(),
+            'requestUrl' => $this->getRequest()->getUri(),
             'aclEntity' => $entity
         ));
         

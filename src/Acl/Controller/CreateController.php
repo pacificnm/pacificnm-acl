@@ -57,7 +57,7 @@ class CreateController extends AbstractApplicationController
                 
                 $this->getEventManager()->trigger('aclCreate', $this, array(
                     'authId' => $this->identity()->getAuthId(),
-                    'historyUrl' => $this->getRequest()->getUri(),
+                    'requestUrl' => $this->getRequest()->getUri(),
                     'aclEntity' => $aclEntity
                 ));
                 

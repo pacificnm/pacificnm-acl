@@ -42,7 +42,7 @@ return array(
             'acl-create' => array(
                 'pageTitle' => 'Acl',
                 'pageSubTitle' => 'New',
-                'activeMenuItem' => 'admin',
+                'activeMenuItem' => 'admin-index',
                 'activeSubMenuItem' => 'acl-index',
                 'type' => 'segment',
                 'options' => array(
@@ -56,7 +56,7 @@ return array(
             'acl-delete' => array(
                 'pageTitle' => 'Acl',
                 'pageSubTitle' => 'Delete',
-                'activeMenuItem' => 'admin',
+                'activeMenuItem' => 'admin-index',
                 'activeSubMenuItem' => 'acl-index',
                 'type' => 'segment',
                 'options' => array(
@@ -73,7 +73,7 @@ return array(
             'acl-index' => array(
                 'pageTitle' => 'Acl',
                 'pageSubTitle' => 'Home',
-                'activeMenuItem' => 'admin',
+                'activeMenuItem' => 'admin-index',
                 'activeSubMenuItem' => 'acl-index',
                 'type' => 'literal',
                 'options' => array(
@@ -87,7 +87,7 @@ return array(
             'acl-rest' => array(
                 'pageTitle' => 'Acl',
                 'pageSubTitle' => 'Rest',
-                'activeMenuItem' => 'admin',
+                'activeMenuItem' => 'admin-index',
                 'activeSubMenuItem' => 'acl-index',
                 'type' => 'segment',
                 'options' => array(
@@ -100,7 +100,7 @@ return array(
             'acl-update' => array(
                 'pageTitle' => 'Acl',
                 'pageSubTitle' => 'Edit',
-                'activeMenuItem' => 'admin',
+                'activeMenuItem' => 'admin-index',
                 'activeSubMenuItem' => 'acl-index',
                 'type' => 'segment',
                 'options' => array(
@@ -117,7 +117,7 @@ return array(
             'acl-view' => array(
                 'pageTitle' => 'Acl',
                 'pageSubTitle' => 'View',
-                'activeMenuItem' => 'admin',
+                'activeMenuItem' => 'admin-index',
                 'activeSubMenuItem' => 'acl-index',
                 'type' => 'segment',
                 'options' => array(
@@ -174,6 +174,7 @@ return array(
     'acl' => array(
         'default' => array(
             'guest' => array(),
+            'user' => array(),
             'administrator' => array(
                 'acl-index',
                 'acl-create',
@@ -186,14 +187,13 @@ return array(
     'menu' => array(
         'default' => array(
             array(
-                'key' => 'admin',
                 'name' => 'Admin',
+                'route' => 'admin-index',
                 'icon' => 'fa fa-gear',
                 'order' => 99,
                 'active' => true,
                 'items' => array(
                     array(
-                        'key' => 'acl-index',
                         'name' => 'Acl',
                         'route' => 'acl-index',
                         'icon' => 'fa fa-gear',

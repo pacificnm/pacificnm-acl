@@ -67,7 +67,7 @@ class UpdateController extends AbstractApplicationController
                 
                 $this->getEventManager()->trigger('aclUpdate', $this, array(
                     'authId' => $this->identity()->getAuthId(),
-                    'historyUrl' => $this->getRequest()->getUri(),
+                    'requestUrl' => $this->getRequest()->getUri(),
                     'aclEntity' => $aclEntity
                 ));
                 
