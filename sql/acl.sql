@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `acl` (
 `acl_id` int(20) NOT NULL,
   `acl_role_id` int(20) unsigned NOT NULL,
   `acl_resource_id` int(20) unsigned NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB;
 
 --
 -- RELATIONS FOR TABLE `acl`:
