@@ -1,6 +1,6 @@
-# pacificnm-action
+# pacificnm-acl
 
-Provides action services and management.
+Provides acl services and management for PacificNM.
 
 File issues at https://github.com/pacificnm/pacificnm-action/issues
 
