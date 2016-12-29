@@ -1,7 +1,7 @@
-# pacificnm-acl
+# pacificnm-action
 
-Provides a lightweight and flexible access control list (ACL) implementation for privileges management.
+Provides action services and management.
 
-File issues at https://github.com/pacificnm/pacificnm-acl/issues
+File issues at https://github.com/pacificnm/pacificnm-action/issues
 
-Documentation is at https://github.com/pacificnm/pacificnm-acl/
+Documentation is at https://github.com/pacificnm/pacificnm-action/
