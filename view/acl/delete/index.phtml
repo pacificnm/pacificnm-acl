@@ -22,8 +22,14 @@
 				<div class="alert alert-warning">
 					<p><i class="fa fa-warning fa-fw"></i> <?php echo $this->translate("Are you sure you want to delete the following?"); ?></p>
 				</div>
-				<h3 class="profile-username"></h3>
-				<p class="text-muted"></p>
+				<h3 class="profile-username">
+					<?php echo ucfirst($this->entity->getRoleEntity()->getAclRoleName()); ?>
+					<?php echo $this->translate("Allowed"); ?>
+					<?php echo $this->entity->getResourceEntity()->getAclResourceName(); ?>
+				</h3>
+				<p class="text-muted">
+					<b><?php echo $this->translate("Acl Id"); ?>:</b> <?php echo $this->entity->getAclId(); ?>
+				</p>
 				<form method="post">
                      <input type="submit" name="delete_confirmation" class="btn btn-danger" value="yes">
                      <input type="submit" name="delete_confirmation" class="btn btn-primary" value="no">
