@@ -10,7 +10,7 @@ return array(
     'module' => array(
         'Acl' => array(
             'name' => 'Acl',
-            'version' => '1.0.5',
+            'version' => '1.0.6',
             'install' => array(
                 'require' => array(
                     'AclResource',
